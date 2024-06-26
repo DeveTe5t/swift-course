@@ -397,7 +397,7 @@ while count < 10 {
     count += 1
 }
 
-// It repear at least one time
+// It repeat at least one time
 var count2 = 5
 repeat {
     print("Repeat while \(count2)")
@@ -616,9 +616,3 @@ struct ExampleStruct {
 var exampleStruct: ExampleStruct = ExampleStruct(name: "Fulano2", age: 51)
 print("struct age: \(exampleStruct.age)")
 print("struct func \(exampleStruct.cual())")
-
-/**
- * Introduction to xCode
- */
-
-print("======= Introduction to xCode")

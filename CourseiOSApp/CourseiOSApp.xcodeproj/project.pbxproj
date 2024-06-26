@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		E60121342C19049900D78DE1 /* TextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60121332C19049900D78DE1 /* TextExample.swift */; };
 		E60121362C19476000D78DE1 /* ImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60121352C19476000D78DE1 /* ImageExample.swift */; };
+		E6762D7C2C19EAF5009FE39A /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6762D7B2C19EAF5009FE39A /* LabelExample.swift */; };
+		E682018F2C2B669B00A118E2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682018E2C2B669B00A118E2 /* MenuView.swift */; };
+		E6867B322C2934E700228069 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6867B312C2934E700228069 /* ButtonExample.swift */; };
+		E6867B342C293BD000228069 /* TextFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6867B332C293BD000228069 /* TextFieldExample.swift */; };
 		E6B605752C181ED40052DB3C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B605742C181ED40052DB3C /* MainView.swift */; };
 		E6C5C87A2C17618700BBDD1F /* CourseiOSAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C5C8792C17618700BBDD1F /* CourseiOSAppApp.swift */; };
 		E6C5C87C2C17618700BBDD1F /* Exercise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C5C87B2C17618700BBDD1F /* Exercise1.swift */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		E60121332C19049900D78DE1 /* TextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExample.swift; sourceTree = "<group>"; };
 		E60121352C19476000D78DE1 /* ImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExample.swift; sourceTree = "<group>"; };
+		E6762D7B2C19EAF5009FE39A /* LabelExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExample.swift; sourceTree = "<group>"; };
+		E682018E2C2B669B00A118E2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		E6867B312C2934E700228069 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
+		E6867B332C293BD000228069 /* TextFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExample.swift; sourceTree = "<group>"; };
 		E6B605742C181ED40052DB3C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E6C5C8762C17618700BBDD1F /* CourseiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C5C8792C17618700BBDD1F /* CourseiOSAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseiOSAppApp.swift; sourceTree = "<group>"; };
@@ -51,6 +59,9 @@
 			children = (
 				E60121332C19049900D78DE1 /* TextExample.swift */,
 				E60121352C19476000D78DE1 /* ImageExample.swift */,
+				E6762D7B2C19EAF5009FE39A /* LabelExample.swift */,
+				E6867B312C2934E700228069 /* ButtonExample.swift */,
+				E6867B332C293BD000228069 /* TextFieldExample.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -78,6 +89,7 @@
 				E6B605732C181E230052DB3C /* Exercises */,
 				E6C5C8792C17618700BBDD1F /* CourseiOSAppApp.swift */,
 				E6B605742C181ED40052DB3C /* MainView.swift */,
+				E682018E2C2B669B00A118E2 /* MenuView.swift */,
 				E6C5C87D2C17618A00BBDD1F /* Assets.xcassets */,
 				E6C5C87F2C17618A00BBDD1F /* Preview Content */,
 			);
@@ -163,9 +175,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C5C87C2C17618700BBDD1F /* Exercise1.swift in Sources */,
+				E6867B322C2934E700228069 /* ButtonExample.swift in Sources */,
+				E6762D7C2C19EAF5009FE39A /* LabelExample.swift in Sources */,
 				E60121342C19049900D78DE1 /* TextExample.swift in Sources */,
+				E682018F2C2B669B00A118E2 /* MenuView.swift in Sources */,
 				E6B605752C181ED40052DB3C /* MainView.swift in Sources */,
 				E60121362C19476000D78DE1 /* ImageExample.swift in Sources */,
+				E6867B342C293BD000228069 /* TextFieldExample.swift in Sources */,
 				E6C5C87A2C17618700BBDD1F /* CourseiOSAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
