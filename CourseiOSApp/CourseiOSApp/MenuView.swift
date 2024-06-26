@@ -9,19 +9,18 @@ import SwiftUI
 
 struct MenuView: View {
     var body: some View {
-        //Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         // Must return a view
         NavigationStack {
             VStack(content: {
-                // Way 1
-                NavigationLink {
-                    // MenuView()
-                } label: {
-                    Text("BMI Calculator")
-                }
+//                // Way 1
+//                NavigationLink {
+//                    BMIView()
+//                } label: {
+//                    Text("BMI Calculator")
+//                }
                 
                 // Way 2
-                NavigationLink(destination:{}){
+                NavigationLink(destination:BMIView()){
                     // BMI (Body Mass Index)
                     Text("BMI Calculator")
                 }

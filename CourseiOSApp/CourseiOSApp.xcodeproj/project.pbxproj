@@ -18,6 +18,7 @@
 		E6C5C87C2C17618700BBDD1F /* Exercise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C5C87B2C17618700BBDD1F /* Exercise1.swift */; };
 		E6C5C87E2C17618A00BBDD1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C5C87D2C17618A00BBDD1F /* Assets.xcassets */; };
 		E6C5C8812C17618A00BBDD1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C5C8802C17618A00BBDD1F /* Preview Assets.xcassets */; };
+		E6F303B92C2C5F580056F5F1 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F303B82C2C5F580056F5F1 /* BMIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E6C5C87B2C17618700BBDD1F /* Exercise1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise1.swift; sourceTree = "<group>"; };
 		E6C5C87D2C17618A00BBDD1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6C5C8802C17618A00BBDD1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6F303B82C2C5F580056F5F1 /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		E6C5C8782C17618700BBDD1F /* CourseiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				E6F303B72C2C5F3F0056F5F1 /* BMI */,
 				E6B605782C181F9F0052DB3C /* Components */,
 				E6B605732C181E230052DB3C /* Exercises */,
 				E6C5C8792C17618700BBDD1F /* CourseiOSAppApp.swift */,
@@ -102,6 +105,14 @@
 				E6C5C8802C17618A00BBDD1F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6F303B72C2C5F3F0056F5F1 /* BMI */ = {
+			isa = PBXGroup;
+			children = (
+				E6F303B82C2C5F580056F5F1 /* BMIView.swift */,
+			);
+			path = BMI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				E682018F2C2B669B00A118E2 /* MenuView.swift in Sources */,
 				E6B605752C181ED40052DB3C /* MainView.swift in Sources */,
 				E60121362C19476000D78DE1 /* ImageExample.swift in Sources */,
+				E6F303B92C2C5F580056F5F1 /* BMIView.swift in Sources */,
 				E6867B342C293BD000228069 /* TextFieldExample.swift in Sources */,
 				E6C5C87A2C17618700BBDD1F /* CourseiOSAppApp.swift in Sources */,
 			);
