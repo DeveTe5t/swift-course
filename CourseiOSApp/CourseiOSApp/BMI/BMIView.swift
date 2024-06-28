@@ -16,7 +16,7 @@ struct BMIView: View {
     @State var gender: Int = 0
     @State var age: Int = 18
     @State var weight: Int = 80
-    @State var height: Double = 140
+    @State var height: Double = 165
     
     var body: some View {
         VStack {
@@ -29,7 +29,7 @@ struct BMIView: View {
                 CardCounterButton(text: "Age", number: $age)
                 CardCounterButton(text: "Weight", number: $weight)
             }
-            BMICalculateButton()
+            BMICalculateButton(userWeight: Double(weight), userHeight: height)
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
         .background(.backgroundApp)
@@ -239,9 +239,12 @@ struct ButtonCounter: View {
 //}
 
 struct BMICalculateButton: View {
+    let userWeight: Double
+    let userHeight: Double
+    
     var body: some View {
         NavigationStack {
-            NavigationLink(destination:{}) {
+            NavigationLink(destination:{BMIResultView(userWeight: userWeight, userHeight: userHeight)}) {
                 Text("Calculate")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .bold()
