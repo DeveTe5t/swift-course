@@ -12,10 +12,10 @@ class ApiNetwork {
     // For parsing is Codable
     struct Wrapper: Codable {
         let response: String
-        let results: [SuperHero]
+        let results: [Superhero]
     }
     
-    struct SuperHero: Codable, Identifiable {
+    struct Superhero: Codable, Identifiable {
         let id: String
         let name: String
     }
