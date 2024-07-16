@@ -9,10 +9,12 @@ import SwiftUI
 
 struct SuperheroSearcher: View {
     @State var superheroName: String = ""
+    @State var wrapper: ApiNetwork.Wrapper? = nil
     
     var body: some View {
         VStack {
-            TextField("", text: $superheroName, prompt: 
+            
+            TextField("", text: $superheroName, prompt:
                 Text("Superfulan...")
                     .font(.title2)
                     .bold()
@@ -27,6 +29,17 @@ struct SuperheroSearcher: View {
             .autocorrectionDisabled()
             .onSubmit {
                 print(superheroName)
+                Task {
+                    do {
+                        wrapper = try await ApiNetwork().getHeroesByQuery(query: superheroName)
+                    } catch {
+                        print("Error")
+                    }
+                }
+            }
+            
+            List(wrapper?.results ?? []) { superhero in
+                Text(superhero.name)                
             }
             
             Spacer()
