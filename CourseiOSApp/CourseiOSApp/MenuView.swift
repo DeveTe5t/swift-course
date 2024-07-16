@@ -11,7 +11,8 @@ struct MenuView: View {
     var body: some View {
         // Must return a view
         NavigationStack {
-            VStack(content: {
+//            VStack(content: {
+            List{
 //                // Way 1
 //                NavigationLink {
 //                    BMIView()
@@ -24,12 +25,13 @@ struct MenuView: View {
                     // BMI (Body Mass Index)
                     Text("BMI Calculator")
                 }
-                
-                Text("App 2")
+                NavigationLink(destination: SuperheroSearcher()) {
+                    Text("Superhero finder")
+                }
                 Text("App 3")
                 Text("App 4")
                 Text("App 5")
-            })
+            }
         }
     }
 }

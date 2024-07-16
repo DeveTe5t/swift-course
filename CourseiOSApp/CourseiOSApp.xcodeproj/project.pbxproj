@@ -10,6 +10,7 @@
 		E60121342C19049900D78DE1 /* TextExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60121332C19049900D78DE1 /* TextExample.swift */; };
 		E60121362C19476000D78DE1 /* ImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60121352C19476000D78DE1 /* ImageExample.swift */; };
 		E601D0FE2C2F3F4400D59EC9 /* BMIResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E601D0FD2C2F3F4400D59EC9 /* BMIResultView.swift */; };
+		E67061042C4573550020E66F /* SuperheroSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67061032C4573550020E66F /* SuperheroSearcher.swift */; };
 		E6762D7C2C19EAF5009FE39A /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6762D7B2C19EAF5009FE39A /* LabelExample.swift */; };
 		E682018F2C2B669B00A118E2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682018E2C2B669B00A118E2 /* MenuView.swift */; };
 		E6867B322C2934E700228069 /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6867B312C2934E700228069 /* ButtonExample.swift */; };
@@ -20,12 +21,14 @@
 		E6C5C87E2C17618A00BBDD1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C5C87D2C17618A00BBDD1F /* Assets.xcassets */; };
 		E6C5C8812C17618A00BBDD1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C5C8802C17618A00BBDD1F /* Preview Assets.xcassets */; };
 		E6F303B92C2C5F580056F5F1 /* BMIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F303B82C2C5F580056F5F1 /* BMIView.swift */; };
+		E6F90E442C44DBDA004B0546 /* ListExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F90E432C44DBDA004B0546 /* ListExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E60121332C19049900D78DE1 /* TextExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExample.swift; sourceTree = "<group>"; };
 		E60121352C19476000D78DE1 /* ImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExample.swift; sourceTree = "<group>"; };
 		E601D0FD2C2F3F4400D59EC9 /* BMIResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIResultView.swift; sourceTree = "<group>"; };
+		E67061032C4573550020E66F /* SuperheroSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearcher.swift; sourceTree = "<group>"; };
 		E6762D7B2C19EAF5009FE39A /* LabelExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExample.swift; sourceTree = "<group>"; };
 		E682018E2C2B669B00A118E2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		E6867B312C2934E700228069 /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
@@ -37,6 +40,7 @@
 		E6C5C87D2C17618A00BBDD1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6C5C8802C17618A00BBDD1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E6F303B82C2C5F580056F5F1 /* BMIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIView.swift; sourceTree = "<group>"; };
+		E6F90E432C44DBDA004B0546 /* ListExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E67061022C4573170020E66F /* Superhero */ = {
+			isa = PBXGroup;
+			children = (
+				E67061032C4573550020E66F /* SuperheroSearcher.swift */,
+			);
+			path = Superhero;
+			sourceTree = "<group>";
+		};
 		E6B605732C181E230052DB3C /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 				E6762D7B2C19EAF5009FE39A /* LabelExample.swift */,
 				E6867B312C2934E700228069 /* ButtonExample.swift */,
 				E6867B332C293BD000228069 /* TextFieldExample.swift */,
+				E6F90E432C44DBDA004B0546 /* ListExample.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -89,6 +102,7 @@
 		E6C5C8782C17618700BBDD1F /* CourseiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				E67061022C4573170020E66F /* Superhero */,
 				E6F303B72C2C5F3F0056F5F1 /* BMI */,
 				E6B605782C181F9F0052DB3C /* Components */,
 				E6B605732C181E230052DB3C /* Exercises */,
@@ -192,6 +206,8 @@
 				E6867B322C2934E700228069 /* ButtonExample.swift in Sources */,
 				E6762D7C2C19EAF5009FE39A /* LabelExample.swift in Sources */,
 				E60121342C19049900D78DE1 /* TextExample.swift in Sources */,
+				E67061042C4573550020E66F /* SuperheroSearcher.swift in Sources */,
+				E6F90E442C44DBDA004B0546 /* ListExample.swift in Sources */,
 				E682018F2C2B669B00A118E2 /* MenuView.swift in Sources */,
 				E6B605752C181ED40052DB3C /* MainView.swift in Sources */,
 				E60121362C19476000D78DE1 /* ImageExample.swift in Sources */,
