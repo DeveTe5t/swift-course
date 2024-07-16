@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct SuperheroSearcher: View {
     @State var superheroName: String = ""
@@ -51,9 +52,28 @@ struct SuperheroSearcher: View {
 
 struct SuperheroItem: View {
     let superhero: ApiNetwork.Superhero
+    
     var body: some View {
         ZStack{
-            Rectangle()
+//            With native code
+//            image original height 640
+//            AsyncImage(url: URL(string: superhero.image.url)) { image in
+//                image
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(height: 480)
+//            }
+//            placeholder: {
+//                ProgressView()
+//            }
+            
+//            With package
+            WebImage(url: URL(string: superhero.image.url))
+                .resizable()
+                .indicator(.activity)
+                .scaledToFill()
+                .frame(height: 480)
+            
             VStack{
                 Spacer()
                 Text(superhero.name)
@@ -62,16 +82,21 @@ struct SuperheroItem: View {
                     .bold()
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .background(.gray.opacity(0.5))
+                    .background(.gray.opacity(0.5)
+                )
             }
         }
-        .frame(height: 200)
+        .frame(height: 480)
         .cornerRadius(32)
         .listRowBackground(Color.backgroundApp)
     }
 }
 
 #Preview {
-//    SuperheroSearcher()
-    SuperheroItem(superhero: ApiNetwork.Superhero(id: "", name: "sup"))
+    SuperheroSearcher()
+//    SuperheroItem(superhero: ApiNetwork.Superhero(
+//        id: "",
+//        name: "Supergirl",
+//        image: ApiNetwork.ImageSuperhero.init(url: "https://www.superherodb.com/pictures2/portraits/10/100/790.jpg")
+//    ))
 }

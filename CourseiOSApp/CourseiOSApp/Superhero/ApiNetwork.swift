@@ -18,6 +18,11 @@ class ApiNetwork {
     struct Superhero: Codable, Identifiable {
         let id: String
         let name: String
+        let image: ImageSuperhero
+    }
+    
+    struct ImageSuperhero: Codable {
+        let url: String
     }
     
     func getHeroesByQuery(query: String) async throws -> Wrapper {
