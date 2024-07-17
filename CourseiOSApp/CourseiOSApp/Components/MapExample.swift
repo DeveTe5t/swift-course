@@ -17,8 +17,37 @@ struct MapExample: View {
     
     var body: some View {
         ZStack {
-            Map(position: $position)
+            MapReader { proxy in
+                
+                Map(position: $position) {
+//                    Marker("Main cathedral of the archdiocese", coordinate: CLLocationCoordinate2D(latitude: 19.7024184, longitude: -101.1955801))
+                    
+                    Annotation("Main cathedral of the archdiocese", coordinate: CLLocationCoordinate2D(latitude: 19.7024184, longitude: -101.1955801)) {
+                        Circle()
+                            .frame(height: 30)
+                            .foregroundColor(.blue)
+                    }.annotationTitles(.visible)
+                }
                 .mapStyle(.hybrid(elevation: .realistic, showsTraffic: true))
+    //            location on move and stop show results
+    //                .onMapCameraChange { context in
+    //                    print("We are in: \(context.region)")
+    //                }
+    //                location on continue move show results
+                    .onMapCameraChange(frequency: .continuous) { context in
+                        print("We are in: \(context.region)")
+                    }
+                    .onTapGesture { coordinate in
+                        if let coordinates = proxy.convert(coordinate, from: .local) {
+                            withAnimation {
+                                position = MapCameraPosition.region(MKCoordinateRegion(
+                                    center: CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude),
+                                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+                                )
+                            }
+                        }
+                    }
+            }
             
             VStack {
                 Spacer()
