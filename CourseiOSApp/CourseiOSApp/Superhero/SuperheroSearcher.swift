@@ -89,7 +89,7 @@ struct SuperheroItem: View {
                 .resizable()
                 .indicator(.activity)
                 .scaledToFill()
-                .frame(height: 480)
+                .frame(height: 300)
             
             VStack{
                 Spacer()
@@ -103,7 +103,7 @@ struct SuperheroItem: View {
                 )
             }
         }
-        .frame(height: 480)
+        .frame(height: 300)
         .cornerRadius(32)
     }
 }
