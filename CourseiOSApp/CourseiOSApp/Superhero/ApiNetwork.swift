@@ -74,7 +74,13 @@ class ApiNetwork {
         return wrapper
     }
     
-    func getHeroById(id: String) {
+    func getHeroById(id: String) async throws -> SuperheroCompleted {
         
+        let accessToken: String = "c01ef8c3efb8310f7f836c5380f68bf1"
+        let urlString: String = "https://superheroapi.com/api/\(accessToken)/\(id)"
+        
+        let url = URL(string: urlString)!
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode(SuperheroCompleted.self, from: data)                
     }
 }
