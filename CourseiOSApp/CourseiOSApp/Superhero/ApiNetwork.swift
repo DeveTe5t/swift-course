@@ -9,12 +9,13 @@ import Foundation
 
 class ApiNetwork {
     
-    // For parsing is Codable
+    // Codable id for parsing
     struct Wrapper: Codable {
         let response: String
         let results: [Superhero]
     }
     
+//    Identifiable is for the list
     struct Superhero: Codable, Identifiable {
         let id: String
         let name: String
@@ -23,6 +24,42 @@ class ApiNetwork {
     
     struct ImageSuperhero: Codable {
         let url: String
+    }
+    
+    struct SuperheroCompleted: Codable {
+        let id: String
+        let name: String
+        let image: ImageSuperhero
+        let powerstats: Powerstats
+        let biography: Biography
+    }
+    
+    struct Powerstats: Codable {
+        let intelligence: String
+        let strength: String        
+        let speed: String
+        let durability: String
+        let power: String
+        let combat: String
+    }
+    
+    struct Biography: Codable {
+//        original
+//        let full-name: String
+//        changed because swift not allow var o let with -
+        let fullName: String
+        let aliases: [String]
+        let publisher: String
+        let alignment: String
+        
+        enum CodingKeys: String, CodingKey {
+//             this is necesary
+            case fullName = "full-name"
+//            Not necesary only for error not codable
+            case aliases = "aliases"
+            case publisher = "publisher"
+            case alignment = "alignment"
+        }
     }
     
     func getHeroesByQuery(query: String) async throws -> Wrapper {
@@ -35,5 +72,9 @@ class ApiNetwork {
         let wrapper = try JSONDecoder().decode(Wrapper.self, from: data)
         
         return wrapper
+    }
+    
+    func getHeroById(id: String) {
+        
     }
 }

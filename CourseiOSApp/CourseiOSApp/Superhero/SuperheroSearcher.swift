@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 struct SuperheroSearcher: View {
     @State var superheroName: String = ""
     @State var wrapper: ApiNetwork.Wrapper? = nil
+    @State var loading: Bool = false
     
     var body: some View {
         VStack {
@@ -29,6 +30,8 @@ struct SuperheroSearcher: View {
             .padding(8)
             .autocorrectionDisabled()
             .onSubmit {
+                loading = true
+                
                 print(superheroName)
                 Task {
                     do {
@@ -36,12 +39,26 @@ struct SuperheroSearcher: View {
                     } catch {
                         print("Error")
                     }
+                    
+                    loading = false
                 }
             }
             
-            List(wrapper?.results ?? []) { superhero in
-                SuperheroItem(superhero: superhero)
-            }.listStyle(.plain)
+            if (loading) {
+                ProgressView().tint(.white)
+            }
+            
+            NavigationStack {
+                List(wrapper?.results ?? []) { superhero in
+//                    Remove arrow of navigation link
+                    ZStack{
+                        SuperheroItem(superhero: superhero)
+                        NavigationLink(destination: SuperheroDetail(id: superhero.id)) {
+                            EmptyView()
+                        }.opacity(0)
+                    }.listRowBackground(Color.backgroundApp)
+                }.listStyle(.plain)
+            }
             
             Spacer()
         }
@@ -88,7 +105,6 @@ struct SuperheroItem: View {
         }
         .frame(height: 480)
         .cornerRadius(32)
-        .listRowBackground(Color.backgroundApp)
     }
 }
 
