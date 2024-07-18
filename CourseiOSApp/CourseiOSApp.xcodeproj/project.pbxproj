@@ -14,6 +14,9 @@
 		E63883502C46D72300B592AB /* ApiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E638834F2C46D72300B592AB /* ApiNetwork.swift */; };
 		E63883532C46F78000B592AB /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E63883522C46F78000B592AB /* SDWebImageSwiftUI */; };
 		E63883552C47127A00B592AB /* SuperheroDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63883542C47127A00B592AB /* SuperheroDetail.swift */; };
+		E64D87022C48C74800D1B8F4 /* FavPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D87012C48C74800D1B8F4 /* FavPlaces.swift */; };
+		E64D87052C48CC9B00D1B8F4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D87042C48CC9B00D1B8F4 /* Place.swift */; };
+		E64D87072C48CE8200D1B8F4 /* CustomDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64D87062C48CE8200D1B8F4 /* CustomDialog.swift */; };
 		E67061042C4573550020E66F /* SuperheroSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67061032C4573550020E66F /* SuperheroSearcher.swift */; };
 		E6762D7C2C19EAF5009FE39A /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6762D7B2C19EAF5009FE39A /* LabelExample.swift */; };
 		E682018F2C2B669B00A118E2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E682018E2C2B669B00A118E2 /* MenuView.swift */; };
@@ -35,6 +38,9 @@
 		E609A89F2C48514D009C3DCB /* MapExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExample.swift; sourceTree = "<group>"; };
 		E638834F2C46D72300B592AB /* ApiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiNetwork.swift; sourceTree = "<group>"; };
 		E63883542C47127A00B592AB /* SuperheroDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroDetail.swift; sourceTree = "<group>"; };
+		E64D87012C48C74800D1B8F4 /* FavPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPlaces.swift; sourceTree = "<group>"; };
+		E64D87042C48CC9B00D1B8F4 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		E64D87062C48CE8200D1B8F4 /* CustomDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDialog.swift; sourceTree = "<group>"; };
 		E67061032C4573550020E66F /* SuperheroSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearcher.swift; sourceTree = "<group>"; };
 		E6762D7B2C19EAF5009FE39A /* LabelExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExample.swift; sourceTree = "<group>"; };
 		E682018E2C2B669B00A118E2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -62,6 +68,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E64D87002C48C6F800D1B8F4 /* FavPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				E64D87032C48CC8D00D1B8F4 /* model */,
+				E64D87012C48C74800D1B8F4 /* FavPlaces.swift */,
+			);
+			path = FavPlaces;
+			sourceTree = "<group>";
+		};
+		E64D87032C48CC8D00D1B8F4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E64D87042C48CC9B00D1B8F4 /* Place.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		E67061022C4573170020E66F /* Superhero */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +113,7 @@
 				E6867B332C293BD000228069 /* TextFieldExample.swift */,
 				E6F90E432C44DBDA004B0546 /* ListExample.swift */,
 				E609A89F2C48514D009C3DCB /* MapExample.swift */,
+				E64D87062C48CE8200D1B8F4 /* CustomDialog.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -113,6 +137,7 @@
 		E6C5C8782C17618700BBDD1F /* CourseiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				E64D87002C48C6F800D1B8F4 /* FavPlaces */,
 				E67061022C4573170020E66F /* Superhero */,
 				E6F303B72C2C5F3F0056F5F1 /* BMI */,
 				E6B605782C181F9F0052DB3C /* Components */,
@@ -220,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C5C87C2C17618700BBDD1F /* Exercise1.swift in Sources */,
+				E64D87022C48C74800D1B8F4 /* FavPlaces.swift in Sources */,
 				E6867B322C2934E700228069 /* ButtonExample.swift in Sources */,
 				E6762D7C2C19EAF5009FE39A /* LabelExample.swift in Sources */,
 				E60121342C19049900D78DE1 /* TextExample.swift in Sources */,
@@ -233,8 +259,10 @@
 				E601D0FE2C2F3F4400D59EC9 /* BMIResultView.swift in Sources */,
 				E63883552C47127A00B592AB /* SuperheroDetail.swift in Sources */,
 				E6867B342C293BD000228069 /* TextFieldExample.swift in Sources */,
+				E64D87052C48CC9B00D1B8F4 /* Place.swift in Sources */,
 				E6C5C87A2C17618700BBDD1F /* CourseiOSAppApp.swift in Sources */,
 				E63883502C46D72300B592AB /* ApiNetwork.swift in Sources */,
+				E64D87072C48CE8200D1B8F4 /* CustomDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
