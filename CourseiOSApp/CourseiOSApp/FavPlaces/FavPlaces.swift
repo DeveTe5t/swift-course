@@ -98,10 +98,21 @@ struct FavPlaces: View {
             }
         }
         .sheet(isPresented: $showSheet) {
+            HStack {
             Text("Saved places")
                 .font(.title)
                 .bold()
-                .padding(.top, 16)
+            
+                if !places.isEmpty {
+                    Button("Delete places") {
+                        places = []
+                        savePlaces()
+                    }
+                    .padding(.horizontal, 32)
+                    .bold()
+                }
+            }
+            .padding(.top, 16)
             
             ScrollView(.horizontal) {
                 
