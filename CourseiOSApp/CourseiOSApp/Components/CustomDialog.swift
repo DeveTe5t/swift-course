@@ -27,7 +27,7 @@ struct CustomDialog<Content: View>: View {
                 }
             
             content
-                .frame(width: UIScreen.main.bounds.size.width - 100, height: 300)
+                .frame(width: UIScreen.main.bounds.size.width - 100, height: 250)
                 .padding()
                 .background(.white)
 //                .cornerRadius(16) // deprecated in iOS 17
@@ -39,9 +39,10 @@ struct CustomDialog<Content: View>: View {
                         }
                     }, label: {
                         Image(systemName: "xmark.circle")
+                            .font(.system(size: 30))
                     })
                     .foregroundColor(.gray)
-                    .padding(16)
+                    .padding(12)
                 }
         }
         .ignoresSafeArea()
