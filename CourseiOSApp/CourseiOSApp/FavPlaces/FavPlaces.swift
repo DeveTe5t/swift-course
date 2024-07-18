@@ -98,9 +98,15 @@ struct FavPlaces: View {
             }
         }
         .sheet(isPresented: $showSheet) {
+            Text("Saved places")
+                .font(.title)
+                .bold()
+                .padding(.top, 16)
             
             ScrollView(.horizontal) {
+                
                 LazyHStack {
+                    
                     ForEach(places) { place in
                         let color = if place.favorite { Color(.yellow) } else { Color(.black).opacity(0.9) }
                         
@@ -129,12 +135,15 @@ struct FavPlaces: View {
                     }
                 }
             }.presentationDetents(Set(heightSheet))
+        }.onAppear {
+            loadPlaces()
         }
     }
     
     func savePlace(name: String, coordinates: CLLocationCoordinate2D, favorite: Bool) {
         let place = Place(name: name, coordinates: coordinates, favorite: favorite)
         places.append(place)
+        savePlaces()
     }
     
     func clearForm() {
@@ -156,4 +165,24 @@ struct FavPlaces: View {
 
 #Preview {
     FavPlaces()
+}
+
+// with extension conect to FavPlaces and should have the same name
+extension FavPlaces {
+    
+    func savePlaces() {
+        
+        if let encodeData = try? JSONEncoder().encode(places) {
+            UserDefaults.standard.set(encodeData, forKey: "places")
+        }
+    }
+    
+    func loadPlaces() {
+        
+        if let savedPlaces = UserDefaults.standard.data(forKey: "places"),
+           let decodedPlaces = try? JSONDecoder().decode([Place].self, from: savedPlaces) {
+
+            places = decodedPlaces
+        }
+    }
 }
