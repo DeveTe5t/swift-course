@@ -23,14 +23,14 @@ struct MenuView: View {
                 // Way 2
                 NavigationLink(destination:BMIView()){
                     // BMI (Body Mass Index)
-                    Text("BMI Calculator")
+                    Text("BMI calculator")
                 }
                 NavigationLink(destination: SuperheroSearcher()) {
                     Text("Superhero finder")
                 }
-                Text("App 3")
-                Text("App 4")
-                Text("App 5")
+                NavigationLink(destination: FavPlaces()) {
+                    Text("Favorites places")
+                }                
             }
         }
     }
