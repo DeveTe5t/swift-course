@@ -99,8 +99,7 @@ struct SuperheroItem: View {
                     .bold()
                     .padding()
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .background(.gray.opacity(0.5)
-                )
+                    .background(.gray.opacity(0.5))
             }
         }
         .frame(height: 300)

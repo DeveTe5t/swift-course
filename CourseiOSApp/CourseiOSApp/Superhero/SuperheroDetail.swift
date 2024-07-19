@@ -22,17 +22,29 @@ struct SuperheroDetail: View {
             }
 //            if superhero is not nil
             else if let superhero = superhero {
-                WebImage(url: URL(string: superhero.image.url))
-                    .resizable()
-//                    .scaledToFit()
-                    .scaledToFill()
-                    .frame(height: 450)
-                    .clipped()
                 
-                Text(superhero.name)
-                    .bold()
-                    .font(.title)
-                    .foregroundColor(.white)
+                ZStack {
+                
+                    WebImage(url: URL(string: superhero.image.url))
+                        .resizable()
+    //                    .scaledToFit()
+                        .scaledToFill()
+                        .frame(height: 450)
+                        .clipped()
+                    
+                    VStack {
+                        Spacer()
+                        Text(superhero.name)                        
+                            .foregroundColor(.white)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .bold()
+                            .padding()
+                            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                            .background(.gray.opacity(0.5))                        
+                    }
+                }
+                .cornerRadius(32)
+                .padding(16)
                 
 //                ForEach(superhero.biography.aliases, id: \.self) { alias in
                 ForEach(superhero.biography.aliases.indices.prefix(2), id: \.self) { index in
@@ -47,13 +59,13 @@ struct SuperheroDetail: View {
 //                Text(superhero.biography.fullName)
 //                    .foregroundColor(.white)
                 
-                Text(superhero.biography.publisher)
-                    .foregroundColor(.white)
+//                Text(superhero.biography.publisher)
+//                    .foregroundColor(.white)
                 
-                Text(superhero.biography.alignment)
-                    .bold()
-                    .font(.title3)
-                    .foregroundColor(.white)
+//                Text(superhero.biography.alignment)
+//                    .bold()
+//                    .font(.title3)
+//                    .foregroundColor(.white)
                 
                 SuperheroStats(stats: superhero.powerstats)
                 
@@ -133,7 +145,7 @@ struct SuperheroStats: View {
             }
         }
         .padding(16)
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 350)
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 250)
         .background(.white)
         .cornerRadius(16)
         .padding(24)
